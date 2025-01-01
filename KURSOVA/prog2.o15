@@ -1,0 +1,57 @@
+\\Prog2
+#Program prog2;
+Start
+Variable Integer32_t AAAAAAAAAAAA,BBBBBBBBBBBB,CCCCCCCCCCCC;
+Get AAAAAAAAAAAA;
+Get BBBBBBBBBBBB;
+Get CCCCCCCCCCCC;
+If(AAAAAAAAAAAA !> BBBBBBBBBBBB)
+Start
+	If(AAAAAAAAAAAA !> CCCCCCCCCCCC)
+	Start
+		Goto Abigger;		
+	Stop
+	Else
+	Start
+		Put CCCCCCCCCCCC;
+		Goto Outofif;
+		Abigger:		
+		Put AAAAAAAAAAAA;
+		Goto Outofif;
+	Stop
+Stop	
+If(BBBBBBBBBBBB !< CCCCCCCCCCCC)
+Start
+	Put CCCCCCCCCCCC;
+Stop	
+Else
+Start
+	Put BBBBBBBBBBBB;
+Stop
+Outofif:	
+
+If((AAAAAAAAAAAA = BBBBBBBBBBBB) And (AAAAAAAAAAAA = CCCCCCCCCCCC) And (BBBBBBBBBBBB = CCCCCCCCCCCC))
+Start
+	Put 1;
+Stop	
+Else
+Start
+	Put 0;
+Stop
+If((AAAAAAAAAAAA !< 0) Or (BBBBBBBBBBBB !< 0) Or (CCCCCCCCCCCC !< 0))
+Start
+	Put -1;
+Stop	
+Else
+Start
+	Put 0;
+Stop
+If(!(AAAAAAAAAAAA !< (BBBBBBBBBBBB + CCCCCCCCCCCC)))
+Start
+	Put(10);
+Stop	
+Else
+Start
+	Put(0);
+Stop
+Stop
